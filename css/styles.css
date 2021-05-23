@@ -8,9 +8,13 @@
   --card-bg: #fafbff;
   --accent-color-text: #ffffff;
 }
+body {
+  font-family: "Catamaran", sans-serif;
+}
 .container {
   width: 1920px;
   outline: auto;
+  margin: 0 auto;
 }
 .header .container {
   display: flex;
@@ -54,12 +58,11 @@
   border-radius: 5px;
 }
 .btn-list button {
-  background-color: transparent;
   border: none;
   align-items: center;
 }
 
-.btn-list .appointment {
+.appointment {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
@@ -69,4 +72,83 @@
   border-radius: 20px;
   padding: 23px 32px;
   border: none;
+}
+/* hero */
+.hero .container {
+  padding-top: 161px;
+  padding-bottom: 138px;
+  padding-left: 188px;
+  background-image: url(../images/heroimj.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 100%;
+  background-position-y: center;
+}
+.hero-title {
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.336;
+  color: var(--primary-text-color);
+}
+.hero-title span {
+  color: var(--text-accent);
+}
+.hero-text {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-top: 29px;
+  margin-bottom: 97px;
+  color: var(--description-color);
+}
+/* history */
+.history .container {
+  padding-left: 1119px;
+  padding-right: 195px;
+  padding-top: 288px;
+  padding-bottom: 175px;
+  background: url(../images/leftimj.png) left top,
+    url(../images/rightimg.png) right top, url(../images/historyimj.png);
+  background-repeat: no-repeat;
+}
+.history-title {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.history-title span {
+  color: var(--text-accent);
+}
+.history-list {
+  margin-top: 80px;
+  margin-bottom: 108px;
+}
+.history-item {
+  width: 526px;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-top: 29px;
+  margin-bottom: 97px;
+  color: var(--description-color);
+}
+.history-item:not(:last-child) {
+  margin-bottom: 48px;
+}
+/* services */
+.services .container {
+  padding: 175px 254px 272px;
+  background: url(../images/servleft.png) left bottom,
+    url(../images/servright.png) right bottom;
+  background-repeat: no-repeat;
+}
+.services-list {
+  display: flex;
+}
+.services .services-title {
+  text-align: center;
 }
