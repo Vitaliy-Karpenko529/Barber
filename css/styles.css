@@ -246,3 +246,31 @@ button {
   color: var(--description-color);
   opacity: 0.65;
 }
+/* GALLERY */
+.gallery .container {
+}
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-title {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 110px;
+}
+.gallery-title span {
+  color: var(--text-accent);
+}
+.gallery-item {
+  width: calc((100% - 74px) / 3);
+}
+.gallery-item:nth-last-child(3n) {
+  margin-right: 0%;
+}
+.gallery-item:nth-last-child(-n + 3) {
+  margin-bottom: 0%;
+}
