@@ -7,62 +7,88 @@
   --card-bg-1: #99baed;
   --card-bg: #fafbff;
   --accent-color-text: #ffffff;
+  --icon-accent: #008fdd;
+  --icon-bg: #e5ecfe;
 }
 body {
   font-family: "Catamaran", sans-serif;
 }
 .container {
   width: 1920px;
-  outline: auto;
   margin: 0 auto;
+  outline: none;
 }
+/* HEADER */
 .header .container {
   display: flex;
   padding-left: 170px;
   padding-right: 213px;
   justify-content: space-between;
+  align-items: center;
 }
 .nav-list {
   display: flex;
 }
-.btn-list {
-  display: flex;
-  align-items: center;
-}
-.btn-list-item:not(:last-child) {
-  margin-right: 72px;
-}
 .logo-wrapper {
   position: relative;
+  display: flex;
+  width: 163px;
+  margin-right: 110px;
 }
 .logo-text {
   position: absolute;
-  bottom: 24px;
-  left: 52px;
+  left: 54px;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 59px;
+  line-height: 1.34;
+  color: var(--accent-color);
+}
+.logo-group {
+  position: relative;
+  margin-top: 30px;
+}
+.nav-list {
+  display: flex;
 }
 .nav-list li:not(:last-child) {
   margin-right: 20px;
 }
 .nav-list a {
+  display: block;
   font-size: 25px;
   line-height: 1.34;
   font-weight: 500;
   padding: 67px 14px 8px;
-  display: block;
   color: var(--primary-text-color);
 }
 .nav-list a:hover,
-:focus {
+.nav-list:focus {
   background-color: var(--accent-color);
   color: var(--accent-color-text);
   border-radius: 5px;
+  transition: all 0.5s ease-out;
+}
+
+.btn-list-item:not(:last-child) {
+  margin-right: 72px;
+}
+.btn-list {
+  display: flex;
+  border: none;
+  padding-top: 46px;
+  align-items: center;
+  margin-left: auto;
 }
 .btn-list button {
   border: none;
-  align-items: center;
+  cursor: pointer;
 }
-
+button {
+  background: transparent;
+}
 .appointment {
+  font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
@@ -72,6 +98,12 @@ body {
   border-radius: 20px;
   padding: 23px 32px;
   border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.appointment:hover,
+.appointment:focus {
+  box-shadow: 0 10px 50px var(--accent-color);
 }
 /* hero */
 .hero .container {
@@ -151,4 +183,66 @@ body {
 }
 .services .services-title {
   text-align: center;
+  margin-bottom: 90px;
+  font-size: 70px;
+  color: var(--primary-text-color);
+}
+.services-title span {
+  color: var(--text-accent);
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 103px;
+  height: 126px;
+  background: var(--icon-bg);
+  box-shadow: 0px 1px 0px var(--icon-accent);
+  border-radius: 13px;
+  margin: 0 auto 59px;
+}
+.services-item:not(:last-child) {
+  margin-right: 45px;
+}
+.title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.15;
+  color: var(--primary-text-color);
+}
+.services-item {
+  padding: 50px 41px 72px;
+  background: var(--card-bg);
+  box-shadow: 0px 5px 0px var(--card-bg-1);
+  border-radius: 29px;
+}
+.icon {
+  fill: var(--icon-accent);
+}
+.services-item:hover .icon-container,
+.services-item:focus .icon-container {
+  background-color: var(--text-accent);
+  transition: all 0.5s ease-out;
+}
+.services-item:hover,
+.services-item:focus {
+  background: var(--card-bg-1);
+  box-shadow: 30px 30px 50px 5px var(--icon-accent);
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.services-item:hover h3,
+.services-item:focus h3,
+.services-item:hover p,
+.services-item:focus p {
+  color: var(--accent-color-text);
+}
+.description {
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.52;
+  color: var(--description-color);
+  opacity: 0.65;
 }
