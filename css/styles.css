@@ -9,6 +9,7 @@
   --accent-color-text: #ffffff;
   --icon-accent: #008fdd;
   --icon-bg: #e5ecfe;
+  --gradient: rgba(82, 150, 255, 0.35);
 }
 body {
   font-family: "Catamaran", sans-serif;
@@ -250,6 +251,9 @@ button {
 .gallery .container {
   padding-top: 40px;
   padding-bottom: 94px;
+  background: url(../images/leftimj.png) left top,
+    url(../images/rightimg.png) right top;
+  background-repeat: no-repeat;
 }
 .gallery-title {
   font-size: 70px;
@@ -285,7 +289,6 @@ button {
   -moz-box-shadow: 0px 1px 12px 31px rgba(19, 148, 216, 0.52);
   transition: all 0.5s ease-out;
 }
-
 .gallery-btn {
   display: block;
   margin-right: auto;
@@ -293,8 +296,20 @@ button {
   padding: 23px 56px;
 }
 /* FOOTER */
+.footer {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-right: auto;
+  margin-left: auto;
+  background: url(../images/footer/gallery-left.png) left bottom,
+    url(../images/footer/gallery-right.png) right bottom;
+  background-repeat: no-repeat;
+}
 .footer-img {
+  position: relative;
+  display: flex;
   text-align: center;
+  justify-content: center;
 }
 .footer-description {
   font-weight: 400;
