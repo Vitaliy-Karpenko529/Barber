@@ -10,6 +10,8 @@
   --icon-accent: #008fdd;
   --icon-bg: #e5ecfe;
   --gradient: rgba(82, 150, 255, 0.35);
+  --logo-color: #99baed;
+  --social-bg: #d3e5ff;
 }
 body {
   font-family: "Catamaran", sans-serif;
@@ -249,11 +251,11 @@ button {
 }
 /* GALLERY */
 .gallery .container {
-  padding-top: 40px;
-  padding-bottom: 94px;
   background: url(../images/leftimj.png) left top,
     url(../images/rightimg.png) right top;
   background-repeat: no-repeat;
+  padding-left: 270px;
+  padding-right: 270px;
 }
 .gallery-title {
   font-size: 70px;
@@ -273,8 +275,6 @@ button {
   margin-top: 0;
   margin-bottom: 77px;
   margin-right: -38px;
-  padding-left: 270px;
-  padding-right: 270px;
 }
 .gallery-item {
   margin-right: 37px;
@@ -297,8 +297,8 @@ button {
 }
 /* FOOTER */
 .footer {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 180px;
+  padding-bottom: 145px;
   margin-right: auto;
   margin-left: auto;
   background: url(../images/footer/gallery-left.png) left bottom,
@@ -308,8 +308,25 @@ button {
 .footer-img {
   position: relative;
   display: flex;
-  text-align: center;
   justify-content: center;
+  margin-bottom: 37px;
+}
+.footer-logo {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  margin: 0;
+  padding: 0;
+  fill: var(--logo-color);
+}
+.footer-text {
+  position: relative;
+  bottom: -7px;
+  height: 53px;
+  width: 91px;
+  left: -23px;
+  margin-top: 24px;
+  fill: var(--logo-color);
 }
 .footer-description {
   font-weight: 400;
@@ -319,8 +336,40 @@ button {
   color: var(--description-color);
   opacity: 0.65;
   letter-spacing: 0.03em;
-  margin-top: 36px;
   margin-bottom: 47px;
 }
-.footer-text {
+.social-contacts {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.social-contacts::after {
+  content: "";
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 1300px;
+  border: 1px solid var(--logo-color);
+}
+.social-list {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 47px;
+}
+.social-item:not(:last-child) {
+  margin-right: 25px;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  background: var(--social-bg);
+}
+.social-icon {
+  fill: var(--accent-color-text);
 }
