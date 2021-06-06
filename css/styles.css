@@ -373,3 +373,8 @@ button {
 .social-icon {
   fill: var(--accent-color-text);
 }
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--card-bg-1);
+  transition: all 0.5s ease-out;
+}
